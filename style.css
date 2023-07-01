@@ -1,0 +1,795 @@
+@import url("https://fonts.googleapis.com/css2?family=Goblin+One&family=Merriweather&display=swap");
+
+:root {
+  --primary-color: #2A5C6B;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "raleway";
+  outline: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+html {
+  line-height: 1.5;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+h1 {
+  color: rgb(17, 17, 18);
+  margin-left: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container {
+  min-width: 300px;
+  max-width: 1366px;
+  margin: auto;
+}
+
+.head-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+header {
+  position: sticky;
+  background: #fff8;
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid #fff5;
+  top: 0;
+  z-index: 1200;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding-inline: 30px;
+}
+
+header .head-menu ul li {
+  padding: 3px 5px;
+  color: rgb(244, 241, 241);
+  margin-left: 35px;
+}
+
+li a {
+  text-decoration: none;
+  color: #111416;
+
+}
+
+header nav ul li {
+  padding: 3px 0;
+  color: rgb(24, 23, 23);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(16, 15, 15);
+}
+
+.login-btn {
+  color: #FFF;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  padding: 10px 25px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  opacity: 0.95;
+  box-shadow: 0 0 30px -5px #2a5c6b40;
+  transform: scale(1.05);
+}
+
+.login-btn:active {
+  transform: scale(0.95);
+}
+
+header nav ul li a span {
+  display: none;
+}
+
+#toggleDiv {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.hidden-menu {
+  position: fixed;
+  width: 90%;
+  top: 100%;
+  left: 2.5%;
+  right: 0;
+  bottom: 0;
+  height: 50vh;
+  background-color: rgb(157 153 153 / 60%);
+  transition: all 0.5s;
+  transform: translateY(-100vh);
+  backdrop-filter: blur(5px);
+}
+
+.head-menu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: none;
+}
+
+.head-menu.show::before {
+  display: block;
+}
+
+header {
+  display: flex;
+  height: 84px;
+  flex-shrink: 0;
+}
+
+.head-menu nav ul {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#toggleDiv > div > nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.desktop-menu .menu-item {
+  display: none;
+  color: #111416;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+h2.article-title {
+  color: rgb(18, 17, 17);
+}
+
+.showmenu {
+  transform: translateX(0) !important;
+}
+
+.showmenu nav ul li:hover {
+  background-color: #d3d1d1e7;
+}
+
+.menu-content {
+  margin: 0.5rem;
+  flex-grow: 1;
+  display: grid;
+}
+
+#toggleDiv {
+  background: #2A5C6B;
+  color: #fff;
+}
+
+#toggleDiv>div>nav>ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#toggleDiv>div>nav>ul li {
+  margin: 0;
+  justify-content: flex-start;
+}
+#close-menu {
+  margin-bottom: 30px;
+}
+#close-menu svg {
+  width: 28px;
+  height: 28px;
+}
+/* li#bars:hover {
+  background-color: rgb(84, 130, 150);
+} */
+
+/* hero section */
+
+.get-start {
+  height: 79vh;
+  position: relative;
+}
+
+.top-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.description {
+  position: absolute;
+  left: 10%;
+  top: 15vh;
+}
+
+.description h2 {
+  color: #000;
+  font-size: 48px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 700;
+  width: 730px;
+  line-height: normal;
+}
+
+.description p {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  width: 580px;
+  line-height: 30px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.description .button {
+  border-radius: 37px;
+  border: 2px solid #FFF;
+  background: var(--primary-color);
+  padding: 10px 20px;
+  color: #FFF;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+}
+
+.description .button:hover {
+  background: #fff;
+  color: var(--primary-color);
+  font-weight: bolder;
+  border-color: var(--primary-color);
+}
+
+/* about us */
+.about p {
+  margin-top: 40px;
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.head-logo {
+  margin-right: auto;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.app-features {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.app-features article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 367px;
+  margin: 12px;
+}
+
+.app-features article .app-info {
+  height: auto;
+}
+
+.app-features article .app-info h4 {
+  justify-content: flex-start;
+  padding-block: 15px 20px;
+  color: #393939;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+/* sections */
+.features {
+  padding: 1rem;
+}
+
+.features img {
+  width: 100%;
+  height: 290px;
+  border-radius: 20px;
+}
+
+.features p {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  width: 70%;
+}
+
+h4 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+h5 {
+  font-size: 1rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  margin-top: 0;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+/* testimonials */
+.test-comment p {
+  padding: 1rem;
+}
+
+/* team */
+.team {
+  margin-top: 40px;
+  padding: 1rem;
+}
+
+.team h3 {
+  margin-block: 20px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  border-radius: 50%;
+  margin-top: 1rem;
+  width: 171px;
+  height: 171px;
+  flex-shrink: 0;
+}
+
+.meta-data {
+  display: grid;
+  justify-content: center;
+}
+
+.meta-data .pm {
+  display: flex;
+  justify-content: center;
+}
+
+.faq-form {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 30px;
+  border-radius: 36px;
+  background: rgba(240, 240, 240, 0.15);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.faq-text {
+  padding-left: 1rem;
+  font-size: 0.8rem;
+  padding: 10px;
+}
+
+/* footer */
+footer {
+  background-color: var(--primary-color);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  color: white;
+  text-align: center;
+}
+
+footer section {
+  padding: 1rem;
+}
+
+footer h4 {
+  display: block;
+  text-align: left;
+  margin-left: 1rem;
+  padding-top: 4rem;
+}
+
+.footer-wrapper p {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+footer form input {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem;
+  border-radius: 25px;
+}
+
+footer form button {
+  border-radius: 50px;
+  margin-top: 1rem;
+  width: 40%;
+  padding: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  color: whitesmoke;
+  background-color: black;
+  margin-bottom: 4rem;
+}
+
+footer .rights {
+  background-color: #393939;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+/* ============================= */
+/* ============================= */
+/* ============================= */
+/* ============================= */
+/* ============================= */
+/* ============================= */
+/* ============================= */
+/* ============================= */
+/* ============================= */
+@media screen and (min-width: 580px) {
+  .head-menu nav ul li span {
+    display: block;
+  }
+}
+
+/* ================Desktop Display ================= */
+@media screen and (min-width: 950px) {
+
+  #bars,
+  #toggleDiv {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .desktop-menu .menu-item {
+    display: inline-block;
+    flex-direction: row;
+  }
+
+  .get-start {
+    width: 100%;
+  }
+
+  .get-start .description {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    line-height: 3rem;
+  }
+
+  .about {
+    padding: 2rem;
+    background: #f0f0f02d;
+  }
+
+  .about p {
+    max-width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1.5rem;
+  }
+
+  section article img {
+    border-radius: 20px;
+  }
+
+  section article .app-info {
+    padding: 10px;
+  }
+
+  section article:nth-child(3) img {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  /* team */
+  .team-members {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px;
+  }
+
+  h6 {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+  }
+
+  /* texst-comment */
+  .test-comment {
+    background: var(--primary-color);
+    color: white;
+    padding: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  .test-comment h3 {
+    justify-content: center;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .test-comment p {
+    max-width: 70%;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+  }
+
+  footer h4 {
+    margin-left: 9rem;
+    margin-bottom: 2rem;
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-wrapper p {
+    text-align: left;
+    margin-bottom: 0;
+    margin-left: 10rem;
+    display: flex;
+    width: 531px;
+    height: 113px;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+
+  .footer-wrapper form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 5rem;
+    border-radius: 37px;
+    width: 70%;
+  }
+
+  .footer-wrapper form input {
+    width: 100%;
+    padding: 0;
+    padding-left: 1rem;
+    border: none;
+  }
+
+  .footer-wrapper form button {
+    min-width: max-content;
+    margin: 3px;
+    background: var(--primary-color);
+    transition: 0.3s ease;
+  }
+
+  .footer-wrapper form button:active {
+    transform: scale(0.95);
+  }
+}
+
+.content {
+  margin-top: .1rem;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.mySwiper {
+  margin-top: 20px;
+}
+
+
+@media (max-width:900px) {
+  .description h2 {
+    font-size: 32px;
+  }
+
+  .top-image {
+    height: 50%;
+  }
+
+  .get-start {
+    height: auto;
+    background: var(--primary-color);
+  }
+
+  .description {
+    position: sticky;
+    padding: 20px;
+    color: #fff;
+    padding-bottom: 40px;
+  }
+
+  .description h2,
+  .description p {
+    color: #fff;
+    width: auto;
+  }
+
+  .description p {
+    font-weight: 300;
+  }
+
+  .description .button {
+    border-radius: 10px;
+  }
+
+  .about p {
+    margin: 0;
+    padding: 20px;
+    color: #000;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  .app-features {
+    flex-direction: column;
+  }
+
+  .app-features article {
+    width: auto;
+  }
+
+  .features p {
+    width: 100%;
+  }
+
+  .test-comment {
+    background: var(--primary-color);
+    padding-block: 20px;
+    color: #fff;
+  }
+
+  .test-comment p {
+    color: #fff;
+  }
+
+  .mySwiper {
+    height: 300px !important;
+  }
+
+  #main-container>footer>div>p {
+    margin-top: 20px;
+  }
+
+  #main-container>footer>div>form {
+    margin-top: 20px;
+  }
+
+  footer form button {
+    border-radius: 37.5px;
+    padding: 15px 20px;
+    border: 2px solid #000;
+    background: #FFF;
+    min-width: max-content;
+    color: #000;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width:500px) {
+  .team-member img {
+    width: 90%;
+    height: 90%;
+  }
+}
